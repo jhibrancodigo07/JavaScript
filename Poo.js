@@ -13,7 +13,7 @@ class Producto {
         console.log(`Información del Producto:
 Nombre: ${this.nombre}
 Precio: $${this.precio}
-Cantidad en inventario:${this.cantidad}
+Cantidad en inventario: ${this.cantidad}
 Valor total en inventario: $${this.valorTotalInventario()}
 `);
     }
