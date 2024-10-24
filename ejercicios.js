@@ -14,3 +14,5 @@ function numarg(a, b) {
 console.log(numarg(5, 10));    
 //console.log(numarg(NaN, 10));  
 //console.log(numarg(Infinity,10)); 
+
+
