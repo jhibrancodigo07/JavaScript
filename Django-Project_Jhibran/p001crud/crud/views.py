@@ -10,12 +10,13 @@ def task_list_and_created(request):
             return redirect('crud:crud_list')
     else:
         form = TaskForm()
-        complete_taks = Task.objects.filter(is_complete=True)
-        incomplete_taks = Task.objects.filter(is_complete=False)
-        
+
+    complete_tasks = Task.objects.filter(is_complete=True)  #type: ignore
+    incomplete_tasks = Task.objects.filter(is_complete=False)  #type: ignore
+
     return render(request, 'task_list.html', {
-        'form' :form,
-        'complete_taks' :complete_taks,
-        'incomplete_taks' :incomplete_taks 
-        
+        'form': form,
+        'complete_tasks': complete_tasks,
+        'incomplete_tasks': incomplete_tasks
     })
+    
