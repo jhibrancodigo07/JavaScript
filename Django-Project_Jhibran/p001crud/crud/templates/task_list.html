@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <h1>CRUD</h1>
+    <form action="" method="post">
+      {% csrf_token %} {{form.as_p}}
+      <button type="submit">Guadar Tarea</button>
+    </form>
+
+    {% for task in tasks%}
+    <li><strong>{{ task.title }}</strong> {{ task.description }}</li>
+    {% empty %}
+    <li>No hay tareas guardadas</li>
+    {% endfor %}
 
     <script src="" async defer></script>
   </body>
