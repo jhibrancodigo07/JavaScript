@@ -9,6 +9,7 @@ class Task(models.Model):
     class Meta:
         ordering = ['-created']
         
-    def __str__(self):
+    def string (self):
         return self.title
+    
     
