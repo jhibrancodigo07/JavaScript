@@ -14,7 +14,15 @@
       <button type="submit">Guadar Tarea</button>
     </form>
 
-    {% for task in tasks%}
+    <h2>Tareas incompletas</h2>
+    {% for task in incomplete_tasks%}
+    <li><strong>{{ task.title }}</strong> {{ task.description }}</li>
+    {% empty %}
+    <li>No hay tareas guardadas</li>
+    {% endfor %}
+
+    <h2>Tareas completas</h2>
+    {% for task in complete_tasks%}
     <li><strong>{{ task.title }}</strong> {{ task.description }}</li>
     {% empty %}
     <li>No hay tareas guardadas</li>
